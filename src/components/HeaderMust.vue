@@ -1,14 +1,35 @@
 <template>
-<div class="container">
-<h2>Task Tracker</h2>
-</div>
+<header>
+<h1>{{title}}</h1>
+
+<ButtonFirst  text="update"  color="Green"/>
+
+
+<FotterEnd/>
+</header>
     
 </template>
 
 <script>
+
+import ButtonFirst from "./ButtonFirst.vue"
+
  export default{
-    name:'HeaderMust'
+    name:'HeaderMust',
+    props:{
+      title:String,
+    },
+ components:{
+    
+    ButtonFirst,
+    
+}
  }
+
 </script>
+
+
+
+
 
 

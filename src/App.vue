@@ -1,5 +1,9 @@
 <template>
-<HeaderMust/>
+<div class="container">
+  <HeaderMust title="dimple"/>
+
+</div>
+
 </template>
 
 <script>
@@ -11,7 +15,15 @@ export default {
   name: 'App',
   components: {
    HeaderMust
+  },
+
+
+  data(){
+    return{
+      task:[]
+    }
   }
+
 }
 </script>
 
