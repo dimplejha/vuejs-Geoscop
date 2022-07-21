@@ -1,6 +1,9 @@
 <template>
 <div class="container">
   <HeaderMust title="dimple"/>
+  <TaskList :task="task" />
+  <!-- <button v-on:click="show=!show">Toogle</button> -->
+  <!-- <beforeUnmounted v-if="show"/> -->
 
 </div>
 
@@ -9,19 +12,46 @@
 <script>
 
 import HeaderMust from "./components/HeaderMust.vue"
+import TaskList from "./components/TaskList.vue" 
+
+// import beforeUnmounted from "./components/beforeUnmounted"
 
 
 export default {
   name: 'App',
   components: {
-   HeaderMust
+   HeaderMust,
+   TaskList
+  //  beforeUnmounted
   },
 
 
   data(){
     return{
+      // show:true,
       task:[]
     }
+  },
+  created(){
+    this.task=[{
+      id:1,
+      text:"Docors appoitment",
+      day:"march 1st 2019",
+      remainder:true,
+    },
+    {
+      id:2,
+      text:"buy medicine",
+      day:"may 1st 2020",
+      remainder:true,
+    },
+    {
+      id:3,
+      text:"pay money",
+      day:"june 1st 2021",
+      remainder:false,
+    },
+    ]
   }
 
 }
